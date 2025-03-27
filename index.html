@@ -1,0 +1,491 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shreya Prakash - Portfolio</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        :root {
+            --primary-color: #6c63ff;
+            --secondary-color: #4d44db;
+            --dark-color: #2a2a2a;
+            --light-color: #f8f9fa;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            color: var(--dark-color);
+            line-height: 1.6;
+        }
+        
+        .navbar {
+            background-color: white;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+        
+        .navbar-brand {
+            font-weight: 700;
+            color: var(--primary-color) !important;
+        }
+        
+        .nav-link {
+            color: var(--dark-color) !important;
+            font-weight: 500;
+            margin: 0 10px;
+        }
+        
+        .nav-link:hover {
+            color: var(--primary-color) !important;
+        }
+        
+        .hero {
+            background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+            padding: 100px 0;
+            text-align: center;
+        }
+        
+        .hero h1 {
+            font-weight: 700;
+            margin-bottom: 20px;
+        }
+        
+        .hero p {
+            font-size: 1.2rem;
+            max-width: 700px;
+            margin: 0 auto 30px;
+        }
+        
+        .btn-primary {
+            background-color: var(--primary-color);
+            border-color: var(--primary-color);
+            padding: 10px 25px;
+            border-radius: 50px;
+            font-weight: 500;
+        }
+        
+        .btn-primary:hover {
+            background-color: var(--secondary-color);
+            border-color: var(--secondary-color);
+        }
+        
+        section {
+            padding: 80px 0;
+        }
+        
+        .section-title {
+            text-align: center;
+            margin-bottom: 60px;
+            position: relative;
+        }
+        
+        .section-title:after {
+            content: '';
+            position: absolute;
+            bottom: -15px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 80px;
+            height: 3px;
+            background-color: var(--primary-color);
+        }
+        
+        .skill-card {
+            background-color: white;
+            border-radius: 10px;
+            padding: 30px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+            margin-bottom: 30px;
+            transition: transform 0.3s ease;
+        }
+        
+        .skill-card:hover {
+            transform: translateY(-10px);
+        }
+        
+        .skill-card h4 {
+            margin-bottom: 20px;
+            color: var(--primary-color);
+        }
+        
+        .experience-item, .education-item {
+            margin-bottom: 40px;
+            padding-left: 20px;
+            border-left: 3px solid var(--primary-color);
+        }
+        
+        .project-card {
+            border: none;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+            margin-bottom: 30px;
+            transition: transform 0.3s ease;
+        }
+        
+        .project-card:hover {
+            transform: translateY(-10px);
+        }
+        
+        .project-card img {
+            height: 200px;
+            object-fit: cover;
+        }
+        
+        .project-card .card-body {
+            padding: 25px;
+        }
+        
+        footer {
+            background-color: var(--dark-color);
+            color: white;
+            padding: 40px 0 20px;
+        }
+        
+        .social-icons a {
+            color: white;
+            font-size: 1.5rem;
+            margin: 0 10px;
+            transition: color 0.3s ease;
+        }
+        
+        .social-icons a:hover {
+            color: var(--primary-color);
+        }
+        
+        .contact-info p {
+            margin-bottom: 10px;
+        }
+        
+        .contact-info i {
+            margin-right: 10px;
+            color: var(--primary-color);
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-light sticky-top">
+        <div class="container">
+            <a class="navbar-brand" href="#">Shreya Prakash</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#about">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#skills">Skills</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#experience">Experience</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#education">Education</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#projects">Projects</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#contact">Contact</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container">
+            <h1>Shreya Prakash</h1>
+            <p class="lead">Computer Science Engineer | Problem Solver | Tech Enthusiast</p>
+            <a href="#contact" class="btn btn-primary">Get In Touch</a>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="py-5">
+        <div class="container">
+            <h2 class="section-title">Profile Summary</h2>
+            <div class="row">
+                <div class="col-lg-8 mx-auto text-center">
+                    <p>A driven B.Tech student specializing in Computer Science and Engineering at KIIT, with a strong foundation in technology and problem-solving. Passionate about innovation, I actively engage in technical projects and leadership roles, including my work with Enactus and Kraftovity. Through these experiences, I have honed my skills in algorithmic problem-solving, project management, and cross-functional collaboration. Eager to contribute to consulting and technology-driven initiatives, I strive to create impactful and sustainable solutions in the engineering domain.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="bg-light py-5">
+        <div class="container">
+            <h2 class="section-title">Technical Skills</h2>
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="skill-card">
+                        <h4>Programming Languages</h4>
+                        <ul>
+                            <li>C</li>
+                            <li>Java</li>
+                            <li>Python</li>
+                            <li>SQL</li>
+                            <li>HTML/CSS/JavaScript</li>
+                            <li>MERN Stack</li>
+                            <li>Bootstrap</li>
+                            <li>PHP (basic)</li>
+                            <li>C++ (basic)</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="skill-card">
+                        <h4>Areas of Expertise</h4>
+                        <ul>
+                            <li>Data Structures</li>
+                            <li>Object-Oriented Programming in Java</li>
+                            <li>Database Management</li>
+                            <li>Data Analysis & Algorithms</li>
+                            <li>Cloud Computing</li>
+                            <li>Machine Learning & AI (beginner)</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="skill-card">
+                        <h4>Tools & Platforms</h4>
+                        <ul>
+                            <li>Git</li>
+                            <li>MySQL</li>
+                            <li>MS Office</li>
+                            <li>VS Code</li>
+                            <li>AWS Cloud</li>
+                            <li>Linux</li>
+                            <li>Windows</li>
+                            <li>Web Technologies</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            
+            <h2 class="section-title mt-5">Professional Skills</h2>
+            <div class="row">
+                <div class="col-md-3">
+                    <div class="skill-card">
+                        <h4>Project Development</h4>
+                        <ul>
+                            <li>Project Management</li>
+                            <li>Strategic Planning</li>
+                            <li>Consulting & Advisory</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="skill-card">
+                        <h4>Research & Innovation</h4>
+                        <ul>
+                            <li>Research & Data Analysis</li>
+                            <li>Innovation & Problem Solving</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="skill-card">
+                        <h4>Leadership & Team</h4>
+                        <ul>
+                            <li>Team Building</li>
+                            <li>Team Planning</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="skill-card">
+                        <h4>Sustainability & Impact</h4>
+                        <ul>
+                            <li>Sustainable Product Development</li>
+                            <li>Social Causes & Impact</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Experience Section -->
+    <section id="experience" class="py-5">
+        <div class="container">
+            <h2 class="section-title">Experience</h2>
+            <div class="experience-item">
+                <h3>Amazon Web Services</h3>
+                <h5>Cloud Computing Engineer Intern</h5>
+                <p class="text-muted">Oct 2024 - Dec 2024</p>
+                <ul>
+                    <li>Completed 10 Week cloud virtual internship program at AWS academy, provided by AICTE.</li>
+                </ul>
+            </div>
+            
+            <div class="experience-item">
+                <h3>Enactus KISS - KIIT</h3>
+                <h5>Actionist</h5>
+                <p class="text-muted">Jan 2025 - present</p>
+                <ul>
+                    <li>Joined Enactus KISS- KIIT: the official Entrepreneurship society of KIIT as a research & development member.</li>
+                    <li>Worked on a S.T.E.M based project idea for kids to experience a fun and playful learning experience.</li>
+                </ul>
+            </div>
+            
+            <div class="experience-item">
+                <h3>Kraftovity</h3>
+                <h5>Art & Craft Team</h5>
+                <p class="text-muted">Jan 2023 - present</p>
+                <ul>
+                    <li>Joined Kraftovity: the official art & decoration club of KIIT as a creative member.</li>
+                    <li>Worked as the creative lead for the event Chimera 5.0</li>
+                    <li>Worked as a member of decorations team for multiple events such as Chimera, KIIT fest 7.0, Halloween celebration.</li>
+                    <li>Khetchen: showcased my art skills at the event hosted for students of the international community.</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <!-- Education Section -->
+    <section id="education" class="bg-light py-5">
+        <div class="container">
+            <h2 class="section-title">Education</h2>
+            <div class="education-item">
+                <h3>Kalinga Institute of Industrial Technology (KIIT) DU</h3>
+                <h5>Bachelors in Technology (B.Tech), Major - Computer Science</h5>
+                <p class="text-muted">2022-2026 | Bhubaneshwar, Odisha</p>
+                <p>CGPA: 8.0 (Till 5th Semester)</p>
+            </div>
+            
+            <div class="education-item">
+                <h3>Maheshwari Girls' School</h3>
+                <h5>12th Standard</h5>
+                <p class="text-muted">2021 | Kolkata, West Bengal</p>
+                <p>Percentage: 90.02%</p>
+            </div>
+            
+            <div class="education-item">
+                <h3>Maheshwari Girls' School</h3>
+                <h5>10th Standard</h5>
+                <p class="text-muted">2019 | Kolkata, West Bengal</p>
+                <p>Percentage: 91.3%</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="py-5">
+        <div class="container">
+            <h2 class="section-title">Projects</h2>
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="card project-card">
+                        <img src="https://images.unsplash.com/photo-1550751827-4bd374c3f58b?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60" class="card-img-top" alt="Cyber Security Project">
+                        <div class="card-body">
+                            <h5 class="card-title">Cyber Security using Honeypot System</h5>
+                            <p class="card-text">A cybersecurity honeypot is a decoy system designed to attract, track, and analyze cyber threats to enhance security defenses.</p>
+                            <p><strong>Tools Used:</strong> Jupyter, Python ML</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="card project-card">
+                        <img src="https://images.unsplash.com/photo-1547658719-da2b51169166?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60" class="card-img-top" alt="Bootstrap Project">
+                        <div class="card-body">
+                            <h5 class="card-title">Bootstrap Photo-Gallery</h5>
+                            <p class="card-text">Developed a responsive photo gallery using Bootstrap for an interactive and user-friendly image display.</p>
+                            <p><strong>Tools used:</strong> Bootstrap 5, HTML, CSS</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <h2 class="section-title mt-5">Volunteering Experiences</h2>
+            <div class="row">
+                <div class="col-md-3 col-6 text-center mb-4">
+                    <div class="p-3 border rounded">
+                        <h5>KAEWS</h5>
+                        <p class="small">KIIT Animal and Environmental Welfare Society</p>
+                    </div>
+                </div>
+                <div class="col-md-3 col-6 text-center mb-4">
+                    <div class="p-3 border rounded">
+                        <h5>Chhavi 3.0</h5>
+                        <p class="small">Hosted a creative competition for government high school students</p>
+                    </div>
+                </div>
+                <div class="col-md-3 col-6 text-center mb-4">
+                    <div class="p-3 border rounded">
+                        <h5>KIITfest 7.0</h5>
+                    </div>
+                </div>
+                <div class="col-md-3 col-6 text-center mb-4">
+                    <div class="p-3 border rounded">
+                        <h5>Art of giving</h5>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-5 bg-light">
+        <div class="container">
+            <h2 class="section-title">Contact Me</h2>
+            <div class="row">
+                <div class="col-lg-6">
+                    <div class="contact-info">
+                        <p><i class="fas fa-envelope"></i> shreyaprakash2003@gmail.com</p>
+                        <p><i class="fas fa-phone"></i> +91-8617709427</p>
+                        <p><i class="fab fa-linkedin"></i> linkedin.com/in/Shreya Prakash</p>
+                        <p><i class="fab fa-github"></i> github.com/ShreyaPrakash2003</p>
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <form>
+                        <div class="mb-3">
+                            <input type="text" class="form-control" placeholder="Your Name">
+                        </div>
+                        <div class="mb-3">
+                            <input type="email" class="form-control" placeholder="Your Email">
+                        </div>
+                        <div class="mb-3">
+                            <textarea class="form-control" rows="4" placeholder="Your Message"></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary">Send Message</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container text-center">
+            <div class="social-icons mb-4">
+                <a href="#"><i class="fab fa-linkedin"></i></a>
+                <a href="#"><i class="fab fa-github"></i></a>
+                <a href="#"><i class="fab fa-twitter"></i></a>
+                <a href="#"><i class="fab fa-instagram"></i></a>
+            </div>
+            <p>&copy; 2024 Shreya Prakash. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        // Smooth scrolling for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+    </script>
+</body>
+</html>
